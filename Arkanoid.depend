@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1649473138 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
+	"Player.h"
+
+1649473228 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
+	"Player.h"
+
+1649473266 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\player.h
+	<conio.h>
+	"Drawer.h"
+
+1649473252 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\drawer.cpp
+	"Drawer.h"
+
+1649471711 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
+	<iostream>
+	<string>
+	<sstream>
+	<windows.h>
+
