@@ -8,9 +8,16 @@ Drawer::Drawer()
         HWND console = GetConsoleWindow();
         RECT ConsoleRect;
         GetWindowRect(console, &ConsoleRect);
-        MoveWindow(console, ConsoleRect.left, ConsoleRect.top, 610, 400, TRUE);
+        MoveWindow(console, ConsoleRect.left, ConsoleRect.top, 610, 440, TRUE);
+        HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        CONSOLE_CURSOR_INFO     cursorInfo;
+
+        GetConsoleCursorInfo(out, &cursorInfo);
+        cursorInfo.bVisible = false;
+        SetConsoleCursorInfo(out, &cursorInfo);
     #else
-        cout << "\e[8;610;400t";
+        cout << "\e[8;610;440t";
     #endif // _WIN32
 }
 

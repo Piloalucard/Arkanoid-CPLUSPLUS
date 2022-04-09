@@ -7,23 +7,29 @@
 #endif
 
 #include "Drawer.h"
+#include "Ball.h"
 
 
 class Player
 {
     public:
-        int vidas;
+        int lifes,score;
         int x,y;
-        int const maxX=60,minX=1;
+
         Drawer d;
         std::string personaje;
         std::string personajeEsp;
-        Player(int vidas);
+        Player(int lifes);
+        void redraw();
         virtual ~Player();
 
         void moveLeft();
         void moveRight();
+        void drawLife();
+        void drawScore();
 
+        int getCX();
+        bool collision(int x,int y);
 
     protected:
 

@@ -14,6 +14,7 @@ class Drawer
 {
     public:
         Drawer();
+        int const maxX=60,minX=2,minY=2,maxY=22;
         virtual ~Drawer();
         void clear();
         void draw(int x,int y,std::string s);
@@ -29,14 +30,14 @@ class Drawer
             }
         #else
             template <class T>
-            inline string ToString(const T& t)
+            inline std::string ToString(const T& t)
             {
                 stringstream ss;
                 ss << t;
                 return ss.str();
             }
 
-            inline string gotoxy(const int& x,const int& y)
+            inline std::string gotoxy(const int& x,const int& y)
             {
                 return "\33[" + ToString(x) + ";" + ToString(y) + "H";
             }
