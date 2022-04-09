@@ -1,4 +1,6 @@
 #include "Player.h"
+#include <iterator>
+#include <list>
 
 #ifdef _WIN32
     #include <windows.h>
@@ -19,11 +21,61 @@ using namespace std;
 
 int main()
 {
-    Player player(3);
-
+    Player player(5);
+    Drawer d;
     Ball ball("*");
+    string dark="||",clear="||";
+    list<Block> blocks;
     while(player.lifes > 0)
     {
+        if(blocks.empty())
+        {
+            int id=0;
+            for(int i=d.minX+1; i<=d.maxX; i+=3)
+            {
+                for(int j=d.minY+1; j<(d.maxY/2); j++)
+                {
+                    if((i+j)%2 == 1)
+                    {
+                        Block b(dark,i,j,id);
+                        blocks.push_back(b);
+                    }
+                    else
+                    {
+                        Block b(clear,i,j,id);
+                        blocks.push_back(b);
+                    }
+                    id++;
+
+                }
+            }
+
+
+
+        }
+        if(ball.y < (d.maxY/2))
+        {
+            std::list<Block>::iterator it;
+            for (it = blocks.begin(); it != blocks.end(); it++)
+            {
+
+                if(it->collision(ball.x,ball.y))
+                {
+                    blocks.erase(it);
+                    it->delDraw();
+                    player.score+=10;
+                    player.drawScore();
+                    ball.collision();
+
+
+
+                }
+
+
+            }
+
+        }
+
 
         if(kbhit())
         {
@@ -63,7 +115,7 @@ int main()
                 }
                 else if(player.collision(ball.x,ball.y))
                 {
-                    ball.collisionMove();
+                    ball.collision();
                     player.redraw();
                 }
 
@@ -77,7 +129,9 @@ int main()
 
 
     }
-    Drawer d;
-    d.draw(30,11,"GAME OVER");
+
+    d.draw(28,14,"GAME OVER!");
+
+    getch();
     getch();
 }

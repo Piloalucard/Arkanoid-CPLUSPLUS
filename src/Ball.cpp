@@ -86,7 +86,7 @@ bool Ball::continueMove()
         return false;
     }
 
-    if(d.minX == x || d.maxX == x)
+    if(d.minX == x || (d.maxX+2) == x)
     {
         left = !left;
     }
@@ -94,7 +94,7 @@ bool Ball::continueMove()
     return true;
 
 }
-void Ball::collisionMove()
+void Ball::collision()
 {
     srand (time(NULL));
     int band = rand() % 2;
@@ -107,7 +107,7 @@ void Ball::collisionMove()
     {
         left=false;
     }
-    up = true;
+    up = !up;
     continueMove();
 }
 

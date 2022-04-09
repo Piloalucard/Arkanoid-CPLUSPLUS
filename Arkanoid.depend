@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1649531756 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
+1649539870 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
 	"Player.h"
+	<iterator>
+	<list>
 	<windows.h>
 	<unistd.h>
 
-1649531878 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
+1649538947 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
 	"Player.h"
 
 1649531615 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\player.h
@@ -16,19 +18,47 @@
 1649531568 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\drawer.cpp
 	"Drawer.h"
 
-1649531452 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
+1649534501 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
 	<iostream>
 	<string>
 	<sstream>
 	<windows.h>
 
-1649531216 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
+1649539037 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
 	<time.h>
 	"Player.h"
+	"Block.h"
 
-1649531417 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
+1649539037 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
 	"Ball.h"
 
 1649527356 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\troop.h
 	<Player.h>
+
+1649538430 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\block.h
+	"Ball.h"
+
+1649539602 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\block.cpp
+	"Block.h"
+
+1649536711 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\lista.cpp
+	"lista.h"
+
+1649536711 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\lista.h
+	<iostream>
+	<fstream>
+	"nodo.h"
+	"Block.h"
+	"listexception.h"
+
+1649535750 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\nodo.h
+	<iostream>
+	"Block.h"
+
+1601598258 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\listexception.h
+	<exception>
+	<string>
+
+1649536059 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\nodo.cpp
+	"nodo.h"
 

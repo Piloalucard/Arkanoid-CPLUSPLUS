@@ -2,6 +2,7 @@
 #define BALL_H
 #include <time.h>
 #include "Player.h"
+#include "Block.h"
 
 class Ball
 {
@@ -16,7 +17,7 @@ class Ball
 
         void startMove();
         bool continueMove();
-        void collisionMove();
+        void collision();
 
         void reset(int x,int y);
 

@@ -14,7 +14,7 @@ class Drawer
 {
     public:
         Drawer();
-        int const maxX=60,minX=2,minY=2,maxY=22;
+        int const maxX=61,minX=2,minY=2,maxY=22;
         virtual ~Drawer();
         void clear();
         void draw(int x,int y,std::string s);

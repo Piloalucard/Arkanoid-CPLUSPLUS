@@ -35,10 +35,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Ball.h" />
+		<Unit filename="include/Block.h" />
 		<Unit filename="include/Drawer.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Ball.cpp" />
+		<Unit filename="src/Block.cpp" />
 		<Unit filename="src/Drawer.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Extensions>

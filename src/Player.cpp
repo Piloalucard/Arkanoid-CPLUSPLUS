@@ -46,7 +46,7 @@ void Player::moveLeft()
 
 void Player::moveRight()
 {
-    if(x < d.maxX)
+    if(x < d.maxX-8)
     {
         d.draw(x,y,personajeEsp);
         x++;
