@@ -19,22 +19,34 @@ void clear()
   #endif
 }
 
+#ifdef _WIN32
+     void gotoxy(int x,int y)
+     {
+      HANDLE hcon;
+      hcon = GetStdHandle(STD_OUTPUT_HANDLE);
+      COORD dwPos;
+      dwPos.X = x;
+      dwPos.Y= y;
+      SetConsoleCursorPosition(hcon,dwPos);
+    }
+#else
+    template <class T>
+    inline string ToString(const T& t)
+    {
+        stringstream ss;
+        ss << t;
+        return ss.str();
+    }
 
-template <class T>
-inline string ToString(const T& t)
-{
-    stringstream ss;
-    ss << t;
-    return ss.str();
-}
+    inline string gotoxy(const int& x,const int& y)
+    {
+        return "\33[" + ToString(x) + ";" + ToString(y) + "H";
+    }
+#endif
 
-inline string gotoxy(const int& x,const int& y)
-{
-    return "\33[" + ToString(x) + ";" + ToString(y) + "H";
-}
 
 int main()
 {
-
-    cout << gotoxy(2,4) << "Hola" << endl;
+    gotoxy(2,4);
+    cout << "Hola" << endl;
 }
