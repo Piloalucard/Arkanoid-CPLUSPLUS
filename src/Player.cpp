@@ -16,13 +16,13 @@ Player::~Player()
     //dtor
 }
 
-Player::setLoc(int x,int y)
+void Player::setLoc(int x,int y)
 {
     this->x=x;
     this->y=y;
 }
 
-Player::moveLeft()
+void Player::moveLeft()
 {
     if(x > minX)
     {
@@ -33,7 +33,7 @@ Player::moveLeft()
 
 }
 
-Player::moveRight()
+void Player::moveRight()
 {
     if(x < maxX)
     {

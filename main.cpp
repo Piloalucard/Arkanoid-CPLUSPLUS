@@ -14,13 +14,10 @@ int main()
     Player player(3);
     while(true)
     {
-        if(kbhit())
-        {
-            char tecla = getch();
-            if(tecla == LEFT) player.moveLeft();
-            if(tecla == RIGHT) player.moveRight();
+        char tecla = getch();
+        if(tecla == LEFT) player.moveLeft();
+        if(tecla == RIGHT) player.moveRight();
 
-        }
     }
     getch();
 }

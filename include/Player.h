@@ -1,6 +1,11 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <conio.h>
+#ifdef _WIN32
+    #include <conio.h>
+#else
+    #include <curses.h>
+#endif
+
 #include "Drawer.h"
 
 
@@ -16,14 +21,14 @@ class Player
         Player(int vidas);
         virtual ~Player();
 
-        moveLeft();
-        moveRight();
+        void moveLeft();
+        void moveRight();
 
 
     protected:
 
     private:
-        setLoc(int x,int y);
+        void setLoc(int x,int y);
 };
 
 #endif // PLAYER_H
