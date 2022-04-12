@@ -1,11 +1,10 @@
 #include "Player.h"
 #include <iterator>
 #include <list>
-
 #ifdef _WIN32
     #include <windows.h>
 #else
-    #include <unistd.h>
+    #include "UnixFuncs.h"
 #endif
 
 #define UP 72
@@ -16,7 +15,6 @@
 
 
 using namespace std;
-
 
 
 int main()
@@ -55,7 +53,7 @@ int main()
         }
         if(ball.y < (d.maxY/2))
         {
-            std::list<Block>::iterator it;
+            list<Block>::iterator it;
             for (it = blocks.begin(); it != blocks.end(); it++)
             {
 

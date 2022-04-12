@@ -8,7 +8,7 @@
     #define _WIN32_WINNT 0x0500
     #include <windows.h>
 #endif
-
+using namespace std;
 
 class Drawer
 {
@@ -17,7 +17,7 @@ class Drawer
         int const maxX=61,minX=2,minY=2,maxY=22;
         virtual ~Drawer();
         void clear();
-        void draw(int x,int y,std::string s);
+        void draw(int x,int y,string s);
         #ifdef _WIN32
             void gotoxy(int x,int y)
             {
@@ -30,14 +30,14 @@ class Drawer
             }
         #else
             template <class T>
-            inline std::string ToString(const T& t)
+            inline string ToString(const T& t)
             {
                 stringstream ss;
                 ss << t;
                 return ss.str();
             }
 
-            inline std::string gotoxy(const int& x,const int& y)
+            inline string gotoxy(const int& x,const int& y)
             {
                 return "\33[" + ToString(x) + ";" + ToString(y) + "H";
             }
