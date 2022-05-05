@@ -77,7 +77,7 @@ bool Ball::continueMove()
     else
         x++;
 
-    if(d.minY == y)
+    if(d.minY+1 == y)
     {
         up = !up;
     }
@@ -86,7 +86,7 @@ bool Ball::continueMove()
         return false;
     }
 
-    if(d.minX == x || (d.maxX+2) == x)
+    if(d.minX+1 == x || (d.maxX+2) == x)
     {
         left = !left;
     }
@@ -94,20 +94,34 @@ bool Ball::continueMove()
     return true;
 
 }
-void Ball::collision()
+void Ball::collision(int centro)
 {
-    srand (time(NULL));
-    int band = rand() % 2;
-    if(band == 0)
+    if(x < centro)
     {
-        left=true;
+        left = true;
     }
-
+    else if(x > centro)
+    {
+        left = false;
+    }
     else
     {
-        left=false;
+        srand (time(NULL));
+        int band = rand() % 2;
+        if(band == 0)
+        {
+            left=true;
+        }
+
+        else
+        {
+            left=false;
+        }
     }
-    up = !up;
+    if(x < d.minY)
+    {
+        up = !up;
+    }
     continueMove();
 }
 

@@ -16,6 +16,7 @@ class Block
         void redraw();
         void delDraw();
         bool collision(int x,int y);
+        int getCX();
 
         bool operator == (const Block&) const;
         bool operator != (const Block&) const;

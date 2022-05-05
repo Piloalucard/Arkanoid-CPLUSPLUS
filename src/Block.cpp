@@ -44,6 +44,25 @@ bool Block::collision(int x, int y)
     return false;
 }
 
+int Block::getCX()
+{
+    float c=0.0f;
+    for(int i=0; i<this->charac.length();i++)
+    {
+        c = c+1.0f;
+    }
+    c = c / 2;
+    int aux = int(c);
+    if((c-aux) == 0.5)
+    {
+        c = c + 0.5;
+        aux = int (c);
+    }
+
+    return x+aux;
+}
+
+
 bool Block::operator==(const Block& b) const
 {
     return this->id == b.id;

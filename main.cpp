@@ -1,4 +1,5 @@
 #include "Player.h"
+
 #include <iterator>
 #include <list>
 
@@ -28,7 +29,7 @@ int main()
     list<Block> blocks;
     while(player.lifes > 0)
     {
-        if(blocks.empty())
+if(blocks.empty())
         {
             int id=0;
             for(int i=d.minX+1; i<=d.maxX; i+=3)
@@ -51,28 +52,32 @@ int main()
             }
 
 
-
         }
         if(ball.y < (d.maxY/2))
         {
             std::list<Block>::iterator it;
+            bool band=false;
             for (it = blocks.begin(); it != blocks.end(); it++)
             {
 
                 if(it->collision(ball.x,ball.y))
                 {
-                    blocks.erase(it);
-                    it->delDraw();
-                    player.score+=10;
-                    player.drawScore();
-                    ball.collision();
-
-
-
+                    band=true;
+                    break;
                 }
 
 
             }
+            if(band)
+            {
+                ball.collision(it->getCX());
+                blocks.erase(it);
+                it->delDraw();
+                player.score+=10;
+                player.drawScore();
+
+            }
+
 
         }
 
@@ -115,7 +120,7 @@ int main()
                 }
                 else if(player.collision(ball.x,ball.y))
                 {
-                    ball.collision();
+                    ball.collision(player.getCX());
                     player.redraw();
                 }
 

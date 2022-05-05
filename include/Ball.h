@@ -17,7 +17,7 @@ class Ball
 
         void startMove();
         bool continueMove();
-        void collision();
+        void collision(int centro);
 
         void reset(int x,int y);
 

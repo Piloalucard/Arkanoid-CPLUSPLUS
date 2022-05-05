@@ -38,7 +38,7 @@ void Player::moveLeft()
     if(x > d.minX)
     {
         d.draw(x,y,personajeEsp);
-        x--;
+        x = x-3;
         d.draw(x,y,personaje);
     }
 
@@ -49,7 +49,7 @@ void Player::moveRight()
     if(x < d.maxX-8)
     {
         d.draw(x,y,personajeEsp);
-        x++;
+        x = x+3;
         d.draw(x,y,personaje);
     }
 
@@ -95,7 +95,20 @@ void Player::drawScore()
 
 int Player::getCX()
 {
-    return x+5;
+    float c=0.0f;
+    for(int i=0; i<this->personaje.length();i++)
+    {
+        c = c+1.0f;
+    }
+    c = c / 2;
+    int aux = int(c);
+    if((c-aux) == 0.5)
+    {
+        c = c - 0.5;
+        aux = int (c);
+    }
+
+    return x+aux;
 }
 
 

@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1649539870 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
+1651767609 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
 	"Player.h"
 	<iterator>
 	<list>
 	<windows.h>
 	<unistd.h>
 
-1649538947 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
+1651767515 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
 	"Player.h"
 
 1649531615 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\player.h
@@ -15,30 +15,30 @@
 	"Drawer.h"
 	"Ball.h"
 
-1649531568 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\drawer.cpp
+1651767194 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\drawer.cpp
 	"Drawer.h"
 
-1649534501 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
+1651767605 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
 	<iostream>
 	<string>
 	<sstream>
 	<windows.h>
 
-1649539037 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
+1651719850 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
 	<time.h>
 	"Player.h"
 	"Block.h"
 
-1649539037 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
+1651767681 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
 	"Ball.h"
 
 1649527356 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\troop.h
 	<Player.h>
 
-1649538430 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\block.h
+1651720083 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\block.h
 	"Ball.h"
 
-1649539602 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\block.cpp
+1651766791 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\block.cpp
 	"Block.h"
 
 1649536711 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\lista.cpp
