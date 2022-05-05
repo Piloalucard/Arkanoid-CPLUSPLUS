@@ -1,12 +1,10 @@
 #include "Player.h"
-
 #include <iterator>
 #include <list>
-
 #ifdef _WIN32
     #include <windows.h>
 #else
-    #include <unistd.h>
+    #include "UnixFuncs.h"
 #endif
 
 #define UP 72
@@ -19,7 +17,6 @@
 using namespace std;
 
 
-
 int main()
 {
     Player player(5);
@@ -29,7 +26,7 @@ int main()
     list<Block> blocks;
     while(player.lifes > 0)
     {
-if(blocks.empty())
+        if(blocks.empty())
         {
             int id=0;
             for(int i=d.minX+1; i<=d.maxX; i+=3)
@@ -52,32 +49,28 @@ if(blocks.empty())
             }
 
 
+
         }
         if(ball.y < (d.maxY/2))
         {
-            std::list<Block>::iterator it;
-            bool band=false;
+            list<Block>::iterator it;
             for (it = blocks.begin(); it != blocks.end(); it++)
             {
 
                 if(it->collision(ball.x,ball.y))
                 {
-                    band=true;
-                    break;
+                    blocks.erase(it);
+                    it->delDraw();
+                    player.score+=10;
+                    player.drawScore();
+                    ball.collision();
+
+
+
                 }
 
 
             }
-            if(band)
-            {
-                ball.collision(it->getCX());
-                blocks.erase(it);
-                it->delDraw();
-                player.score+=10;
-                player.drawScore();
-
-            }
-
 
         }
 
@@ -120,7 +113,7 @@ if(blocks.empty())
                 }
                 else if(player.collision(ball.x,ball.y))
                 {
-                    ball.collision(player.getCX());
+                    ball.collision();
                     player.redraw();
                 }
 

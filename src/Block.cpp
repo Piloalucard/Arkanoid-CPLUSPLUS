@@ -3,7 +3,7 @@ using namespace std;
 
 Block::Block(){}
 
-Block::Block(std::string c,int x,int y,int id)
+Block::Block(string c,int x,int y,int id)
 {
     charac=c;
     this->characEsp="";

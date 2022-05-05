@@ -62,3 +62,52 @@
 1649536059 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\nodo.cpp
 	"nodo.h"
 
+1649639157 source:/home/vandelvan/Documents/Arkanoid-CPLUSPLUS/src/Ball.cpp
+	"Ball.h"
+
+1649639157 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/Ball.h
+	<time.h>
+	"Player.h"
+	"Block.h"
+
+1649639157 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/Player.h
+	<conio.h>
+	<curses.h>
+	"Drawer.h"
+	"Ball.h"
+
+1649804635 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/Drawer.h
+	<iostream>
+	<string>
+	<sstream>
+	<windows.h>
+
+1649639157 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/Block.h
+	"Ball.h"
+
+1649785789 source:/home/vandelvan/Documents/Arkanoid-CPLUSPLUS/src/Block.cpp
+	"Block.h"
+
+1649639157 source:/home/vandelvan/Documents/Arkanoid-CPLUSPLUS/src/Drawer.cpp
+	"Drawer.h"
+
+1649639157 source:/home/vandelvan/Documents/Arkanoid-CPLUSPLUS/src/Player.cpp
+	"Player.h"
+
+1649785768 source:/home/vandelvan/Documents/Arkanoid-CPLUSPLUS/main.cpp
+	"Player.h"
+	<iterator>
+	<list>
+	<windows.h>
+	"UnixFuncs.h"
+
+1649785340 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/UnixConio.h
+	<unistd.h>
+	<termios.h>
+	<sys/ioctl.h>
+
+1649785730 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/UnixFuncs.h
+	<unistd.h>
+	<termios.h>
+	<sys/ioctl.h>
+
