@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1651767609 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
+1651937402 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\main.cpp
 	"Player.h"
 	<iterator>
 	<list>
 	<windows.h>
-	<unistd.h>
+	"UnixFuncs.h"
 
-1651767515 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
+1651767722 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\player.cpp
 	"Player.h"
 
-1649531615 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\player.h
+1651937641 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\player.h
 	<conio.h>
 	<curses.h>
 	"Drawer.h"
@@ -18,18 +18,18 @@
 1651767194 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\drawer.cpp
 	"Drawer.h"
 
-1651767605 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
+1651767856 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\drawer.h
 	<iostream>
 	<string>
 	<sstream>
 	<windows.h>
 
-1651719850 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
+1651937228 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\ball.h
 	<time.h>
 	"Player.h"
 	"Block.h"
 
-1651767681 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
+1651937315 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\ball.cpp
 	"Ball.h"
 
 1649527356 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\troop.h
@@ -38,7 +38,7 @@
 1651720083 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\block.h
 	"Ball.h"
 
-1651766791 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\block.cpp
+1651767856 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\block.cpp
 	"Block.h"
 
 1649536711 source:c:\users\gustavo\documents\github\arkanoid-cplusplus\src\lista.cpp
@@ -107,6 +107,11 @@
 	<sys/ioctl.h>
 
 1649785730 /home/vandelvan/Documents/Arkanoid-CPLUSPLUS/include/UnixFuncs.h
+	<unistd.h>
+	<termios.h>
+	<sys/ioctl.h>
+
+1651767856 c:\users\gustavo\documents\github\arkanoid-cplusplus\include\unixfuncs.h
 	<unistd.h>
 	<termios.h>
 	<sys/ioctl.h>

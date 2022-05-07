@@ -17,7 +17,7 @@ class Ball
 
         void startMove();
         bool continueMove();
-        void collision(int centro);
+        void collision(int centro,std::string collider);
 
         void reset(int x,int y);
 

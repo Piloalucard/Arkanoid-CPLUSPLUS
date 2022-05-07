@@ -94,7 +94,7 @@ bool Ball::continueMove()
     return true;
 
 }
-void Ball::collision(int centro)
+void Ball::collision(int centro,string collider)
 {
     if(x < centro)
     {
@@ -118,9 +118,14 @@ void Ball::collision(int centro)
             left=false;
         }
     }
-    if(x < d.minY)
+
+    if(collider == "Block")
     {
-        up = !up;
+        up = false;
+    }
+    else if(collider == "Player")
+    {
+        up = true;
     }
     continueMove();
 }

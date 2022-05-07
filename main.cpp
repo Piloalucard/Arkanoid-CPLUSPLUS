@@ -63,7 +63,7 @@ int main()
                     it->delDraw();
                     player.score+=10;
                     player.drawScore();
-                    ball.collision();
+                    ball.collision(it->getCX(),"Block");
 
 
 
@@ -113,7 +113,7 @@ int main()
                 }
                 else if(player.collision(ball.x,ball.y))
                 {
-                    ball.collision();
+                    ball.collision(player.getCX(),"Player");
                     player.redraw();
                 }
 
